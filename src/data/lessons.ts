@@ -14,7 +14,7 @@ export interface LessonSection {
 export interface Lesson {
   id: number;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   icon: React.ElementType;
   completed: boolean;
   sections: LessonSection;

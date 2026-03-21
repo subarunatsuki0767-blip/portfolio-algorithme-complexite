@@ -119,16 +119,16 @@ const LessonDetail = () => {
             <span>Leçon {String(nextLesson.id).padStart(2, "0")}</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
-        ) : ""
-        //     (
-        //   <Link
-        //     to="/bilan"
-        //     className="flex items-center gap-2 text-sm text-primary font-medium hover:underline"
-        //   >
-        //     Bilan de semestre
-        //     <ArrowRight className="h-4 w-4" />
-        //   </Link>
-        // )
+        ) :
+            (
+          <Link
+            to="/bilan"
+            className="flex items-center gap-2 text-sm text-primary font-medium hover:underline"
+          >
+            Bilan de semestre
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        )
         }
       </div>
     </div>

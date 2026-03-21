@@ -23,7 +23,7 @@ const Navigation = () => {
         <nav className="hidden md:flex items-center gap-1">
           <NavItem to="/" icon={<Home className="h-4 w-4" />} label="Accueil" />
           <NavItem to="/lecons" icon={<BookOpen className="h-4 w-4" />} label="Leçons" />
-          {/*<NavItem to="/bilan" icon={<Award className="h-4 w-4" />} label="Bilan" />*/}
+          <NavItem to="/bilan" icon={<Award className="h-4 w-4" />} label="Bilan" />
         </nav>
 
         <div className="flex items-center gap-3">

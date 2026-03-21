@@ -163,4 +163,78 @@ export const lessons: Lesson[] = [
       },
     },
   },
+  {
+    id: 7,
+    title: "Techniques classiques de conception d’algorithmes",
+    subtitle: "Optimisation et sous-problèmes",
+    icon: Target,
+    completed: true,
+    sections: {
+      journal: "Cette semaine, on a exploré les stratégies pour concevoir des algorithmes performants, et c’est exactement ce qu’il me fallait pour monter en compétence en architecture\n" +
+          ". Passer de la force brute, qui essaie tout sans réfléchir, à des méthodes comme Diviser pour régner ou la programmation dynamique a été une vraie révélation\n" +
+          ". Ma réussite a été de comprendre comment la mémoïsation évite de refaire dix fois le même calcul, un peu comme un cache en développement web\n" +
+          ". Ma difficulté reste d'identifier instantanément quelle technique appliquer face à un problème inédit, surtout à 21h quand la fatigue du bureau pèse. C’est stimulant de voir que l’on peut rendre \"possible\" ce qui semblait inefficace\n" +
+          ".",
+      synthese: "Cette leçon présente trois grands paradigmes pour dépasser l'inefficacité de la force brute\n" +
+          " :\n" +
+          "Diviser pour régner (DPR) : On découpe le problème en sous-problèmes plus petits, on les résout récursivement, puis on combine les résultats (ex: calcul du max ou tris rapides)\n" +
+          ".\n" +
+          "Programmation dynamique (PD) : Utilisée pour l'optimisation quand les sous-problèmes se chevauchent\n" +
+          ". On stocke les résultats intermédiaires soit par mémoïsation (top-down) soit par tabulation (bottom-up) pour ne jamais recalculer la même chose\n" +
+          ".\n" +
+          "Backtracking (Retour sur trace) : Une méthode d'essais et d'erreurs où l'on construit une solution partielle et où l'on revient en arrière dès qu'on s'aperçoit qu'un choix mène à une impasse (ex: problème des N-Reines)\n" +
+          ".\n",
+      application: "Dans mon travail quotidien avec React et TypeScript, j'applique la programmation dynamique sans même le savoir via des hooks comme useMemo. Si je dois traiter une liste complexe de données reçues par Axios pour calculer des statistiques à afficher dans un composant ShadCN, j'utilise la mémoïsation pour éviter que le calcul ne se relance inutilement à chaque re-render de l'interface\n" +
+          ".\n" +
+          "De même, pour une fonctionnalité de formulaire dynamique multi-étapes complexe avec Zod, je pourrais utiliser une logique de Backtracking : si l'utilisateur fait un choix à l'étape 3 qui rend les données de l'étape 2 invalides, l'algorithme doit \"revenir en arrière\" pour forcer une correction avant de poursuivre l'extension de la saisie\n" +
+          ". C'est ce genre de logique qui rend mes applications plus professionnelles et maintenables.",
+          autoEvaluation: {
+        maitrise: "Le concept de mémoïsation (le \"souvenir\" des résultats) et le principe de division des problèmes en sous-tâches indépendantes",
+        ameliorer: "L'analyse rigoureuse via le Théorème Maître pour calculer la complexité exacte des algorithmes récursifs",
+        strategie: "Je vais m'entraîner sur l'exercice du sac à dos en C ce week-end\n" +
+            "C'est un cas d'école parfait pour comparer force brute et programmation dynamique, ce qui m'aidera à mieux visualiser l'optimisation de ressources.",
+      },
+    },
+  },
+  {
+    id: 8,
+    title: "Techniques de conception d’algorithmes approchés",
+    subtitle: "Optimisation et sous-problèmes",
+    icon: Target,
+    completed: true,
+    sections: {
+      journal: "Cette semaine, on a découvert les algorithmes approchés, et c'est un soulagement de voir qu'on n'a pas toujours besoin de la solution \"parfaite\" si elle coûte trop cher en ressources\n" +
+          ". Après mes journées de 8h à 18h à coder des interfaces propres avec ShadCN, me plonger dans les heuristiques et méta-heuristiques à 19h a été intense mais passionnant\n" +
+          ". Ma réussite a été de comprendre l'aspect \"pragmatique\" de l'algorithme glouton : on fait le meilleur choix local tout de suite et on ne revient pas en arrière\n" +
+          ". Ma principale difficulté a été de bien saisir le fonctionnement de la mémoire à court terme dans la recherche Tabou pour éviter de tourner en rond dans les solutions\n" +
+          ". Je me sens de plus en plus capable de juger quand il faut arrêter de chercher l'optimum absolu pour privilégier l'efficacité en production\n" +
+          ".",
+      synthese: "Pour moi qui aime le code maintenable et professionnel, les algorithmes approchés sont des outils de compromis entre qualité et temps de calcul\n" +
+          ".\n" +
+          "Les Heuristiques : Ce sont des méthodes rapides qui exploitent la structure d'un problème\n" +
+          ". L'approche gloutonne construit une solution étape par étape par des choix irrévocables\n" +
+          ". La recherche locale, elle, part d'une solution et explore son voisinage pour l'améliorer itérativement\n" +
+          ".\n" +
+          "Les Méta-heuristiques : Ce sont des stratégies de haut niveau, plus génériques\n" +
+          ". La recherche Tabou utilise une liste de mouvements interdits pour sortir des optima locaux\n" +
+          ". Les algorithmes génétiques s'inspirent de la sélection naturelle (croisement, mutation) pour faire évoluer une population de solutions\n" +
+          ".\n" +
+          "L'objectif : Trouver une solution \"suffisamment bonne\" en un temps raisonnable, surtout quand le problème est trop complexe pour une résolution exacte\n" +
+          ".",
+      application: "Dans mon quotidien de développeur, je pourrais appliquer ces concepts pour optimiser une fonctionnalité de planification automatique dans une application React. Par exemple, si je dois suggérer une répartition de tâches pour une équipe sans dépasser un quota d'heures (un problème de type Sac à dos), au lieu d'utiliser une solution exacte trop lourde, j'implémenterais une heuristique gloutonne basée sur le ratio priorité/temps\n" +
+          ". C'est une approche simple, propre et très rapide à l'exécution pour l'utilisateur final\n" +
+          ".\n" +
+          "Aussi, pour un outil de génération de mises en page dynamiques complexes où les composants ne doivent pas se chevaucher (similaire au problème des N-Reines), un algorithme génétique léger permettrait de tester plusieurs combinaisons et de garder la plus ergonomique sans figer l'interface\n" +
+          ". Cela rend mon code évolutif car je peux ajuster la \"fitness\" (la qualité) selon les retours des utilisateurs\n" +
+          ".",
+      autoEvaluation: {
+        maitrise: "Le principe de l'algorithme glouton et la notion de voisinage dans la recherche locale\n" +
+            ".",
+        ameliorer: "Le réglage des paramètres des algorithmes génétiques (probabilités de mutation et de croisement) pour éviter une convergence trop lente\n" +
+            ".",
+        strategie: "Pour garder mon code simple et réutilisable, je vais essayer d'implémenter l'exercice du rendu de monnaie en C ce week-end, en comparant la version gloutonne avec les cas où elle n'est pas optimale\n" +
+            ". C'est un bon exercice pour muscler ma logique avant mes futures certifications Java Backend.",
+      },
+    },
+  },
 ];

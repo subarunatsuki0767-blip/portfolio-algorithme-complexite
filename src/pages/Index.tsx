@@ -60,12 +60,12 @@ const Index = () => {
                 Accéder aux leçons
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              {/*<Link*/}
-              {/*  to="/bilan"*/}
-              {/*  className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"*/}
-              {/*>*/}
-              {/*  Bilan de semestre*/}
-              {/*</Link>*/}
+              <Link
+                to="/bilan"
+                className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+              >
+                Bilan de semestre
+              </Link>
             </motion.div>
           </motion.div>
         </div>
